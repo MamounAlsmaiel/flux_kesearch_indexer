@@ -1,0 +1,14 @@
+{
+  "name": "mamounalsmaiel/flux-kesearch-indexer",
+  "type": "typo3-cms-extension",
+  "description": "KeSearch Indexer for Flux Elements",
+  "autoload": {
+    "psr-4": {
+      "MamounAlsmaiel\\FluxKesearchIndexer\\": "Classes"
+    }
+  },
+  "require": {
+    "typo3/cms-core": "^8.7 || ^9.5",
+    "fluidtypo3/flux": "^9.1"
+  }
+}
