@@ -17,6 +17,7 @@ plugin.tx_flux_kesearch_indexer{
       yourElement2{
         fields = fieldName1,fieldName2,fieldName3,...
       }
-   }
- }
+    }
+  }
+}
 ```
