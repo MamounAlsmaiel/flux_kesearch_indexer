@@ -4,7 +4,7 @@ $EM_CONF[$_EXTKEY] = array(
     'title' => 'flux_kesearch_indexer',
     'description' => 'ke_search Indexer For Flux Elements',
     'category' => 'backend',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'dependencies' => 'ke_search',
     'state' => 'stable',
     'author' => 'Mamoun Alsmaiel',
@@ -12,7 +12,7 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '8.7.0-9.9.99',
-            'flux' => ''
+            'flux' => '9.0.0-9.9.99'
         ),
         'conflicts' => array(),
         'suggests' => array(),
