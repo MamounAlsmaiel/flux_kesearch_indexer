@@ -4,7 +4,6 @@ namespace MamounAlsmaiel\FluxKesearchIndexer;
 
 use RecursiveIteratorIterator;
 use RecursiveArrayIterator;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 
@@ -44,7 +43,7 @@ class AdditionalContentFields {
        
         // Add the content of the field "pi_flexform" to $bodytext, which is, what will be saved to the index.
         $flexform    = '';
-        $flexformService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\FlexFormService');
+        $flexformService = GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Service\\FlexFormService');
         $flexArr = $flexformService->convertFlexFormContentToArray($ttContentRow['pi_flexform']);
         
         $iterator  = new RecursiveArrayIterator($flexArr);
