@@ -28,17 +28,19 @@ class AdditionalContentFields {
         $extbaseFrameworkConfiguration = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
         $config = $extbaseFrameworkConfiguration['plugin.']['tx_flux_kesearch_indexer.']['config.'];
         $indexableFields =  array();
-        foreach ($config['elements.'] as $key => $value) {
-            $type = str_replace('.' , '' , $key);
-            if($type !== $ttContentRow['CType'] ){
-                continue;
-            }
-            foreach ($value as $key => $value) {
-                if($key == 'fields'){
-                    $indexableFields = explode(',' , $value);
+        
+        if ($config != NULL) {
+            foreach ($config['elements.'] as $key => $value) {
+                $type = str_replace('.' , '' , $key);
+                if($type !== $ttContentRow['CType'] ){
+                    continue;
+                }
+                foreach ($value as $key => $value) {
+                    if($key == 'fields'){
+                        $indexableFields = explode(',' , $value);
+                    }
                 }
             }
-        
         }
        
         // Add the content of the field "pi_flexform" to $bodytext, which is, what will be saved to the index.
